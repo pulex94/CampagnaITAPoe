@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Guida Atto I - Path of Exile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #f39c12;
+    }
+
+    .hover-item {
+      position: relative;
+      cursor: pointer;
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    .hover-image {
+      display: none;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      z-index: 10;
+    }
+
+    .hover-item:hover .hover-image {
+      display: block;
+    }
+
+    .hover-image img {
+      max-width: 150px;
+      border: 2px solid #444;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+  <h2>Guida Atto I</h2>
+
+  <ul>
+    <li>
+      Uccidi 
+      <span class="hover-item">Hillock
+        <span class="hover-image">
+          <img src="https://pathofexile.fandom.com/wiki/Special:Redirect/file/Hillock_boss.png" alt="Hillock">
+        </span>
+      </span>
+      alla fine del <b>Twilight Strand</b>.
+    </li>
+    <li>
+      Entra a <b>Lioneye’s Watch</b> e parla con <b>Tarkleigh</b> per ricevere la ricompensa.
+    </li>
+    <li>
+      Trova e uccidi 
+      <span class="hover-item">Brutus
+        <span class="hover-image">
+          <img src="https://pathofexile.fandom.com/wiki/Special:Redirect/file/Brutus_boss.png" alt="Brutus">
+        </span>
+      </span>.
+    </li>
+    <li>
+      Sconfiggi 
+      <span class="hover-item">Merveil
+        <span class="hover-image">
+          <img src="https://pathofexile.fandom.com/wiki/Special:Redirect/file/Merveil_boss.png" alt="Merveil">
+        </span>
+      </span>
+      e avanza nella <b>Southern Forest</b>.
+    </li>
+  </ul>
+</body>
+</html>
