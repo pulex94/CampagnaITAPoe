@@ -1,2 +1,0 @@
-# CampagnaITAPoe
-Campagna ITA Poe
