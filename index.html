@@ -48,10 +48,10 @@
       }
     }
 
-    /* Mobile: quando attivo */
+    /* Mobile / click: quando attivo */
     .hover-item.active .hover-image {
       display: block;
-      position: static;   /* sotto al testo */
+      position: static;   /* diventa parte del flusso normale */
       margin-top: 8px;
     }
   </style>
@@ -91,15 +91,15 @@
     </li>
   </ul>
 
- <script>
-  document.querySelectorAll('.hover-item').forEach(item => {
-    item.addEventListener('click', (e) => {
-      // blocca il click sull'immagine stessa
-      if (e.target.tagName === 'IMG') return;
-
-      item.classList.toggle('active');
+  <script>
+    // Mobile: toggle immagine al tap/click su testo o immagine
+    document.querySelectorAll('.hover-item').forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        item.classList.toggle('active');
+      });
     });
-  });
-</script>
+  </script>
 </body>
 </html>
