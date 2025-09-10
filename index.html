@@ -1,67 +1,120 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Guida Atto I - Path of Exile</title>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: #eee;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* Intestazione con titolo e select */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-h2 { 
-  color: #f39c12; 
-  margin: 0;
-}
-
-select {
-  background: #222;
-  color: #eee;
-  border: 1px solid #555;
-  border-radius: 4px;
-  padding: 5px 10px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-select:focus {
-  outline: none;
-  border-color: #f39c12;
-}
-</style>
-</head>
-<body>
-
-<div class="header">
-  <h2>Guida Atto I</h2>
-  <select>
-    <option>Atto I</option>
-    <option>Atto II</option>
-    <option>Atto III</option>
-    <option>Atto IV</option>
-    <option>Atto V</option>
-  </select>
-</div>
-
-<ul>
-  <li>Uccidi Hillock alla fine del <b>Twilight Strand</b>.</li>
-  <li>Entra a <b>Lioneye’s Watch</b> e parla con <b>Tarkleigh</b> per ricevere la ricompensa.</li>
-  <!-- resto lista -->
-</ul>
-
-</body>
+  <link rel="stylesheet" href="style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guida Atto I - Path of Exile</title>
+  </head>
+  <body>
+    <div class="header">
+      <h2>Guida</h2>
+      <select id="attoSelect">
+        <option value="atto1">Atto I</option>
+        <option value="atto2">Atto II</option>
+      </select>
+    </div>
+    <div id="atto1" class="content active">
+      <ul>
+        <li>Uccidi Hillock alla fine del <b>Twilight Strand</b>.</li>
+        <li>
+          Entra a <b>Lioneye’s Watch</b> e parla con <b>Tarkleigh</b> per
+          ricevere la ricompensa.
+        </li>
+        <li>
+          Entra nella <b>Coast</b> e corri fino alla fine della zona. Assicurati
+          di prendere il <b>Waypoint</b>. Poi entra nelle <b>Mud Flats</b>.
+        </li>
+        <li>
+          Trova i 3 <b>Nidi di Rhoa</b>. Una volta ottenuti l’<b
+            >Ammonite Glyph</b
+          >, l’<b>Haliotis Glyph</b> e il <b>Roseus Glyph</b>, cerca il muro dei
+          glifi e apri l’uscita per il <b>Submerged Passage</b>. Entra e attiva
+          il <b>Waypoint</b>.
+        </li>
+        <li>
+          Usa il <b>Waypoint</b> per tornare alla <b>Coast</b> e poi entra nella
+          <b>Tidal Island</b> a destra. Vai dritto da <b>Hailrake</b> e
+          uccidilo. Esci (logout) e consegna la missione a <b>Nessa</b>. Prendi
+          la <b>Quicksilver Flask</b> come ricompensa.
+        </li>
+        <li>Parla con <b>Tarkleigh</b> per ricevere la ricompensa in gemma.</li>
+        <li>
+          Usa il <b>Waypoint</b> per tornare al <b>Submerged Passage</b>. Se
+          trovi l’ingresso per le <b>Flooded Depths</b>, piazza un portale per
+          poterci tornare velocemente più tardi.
+        </li>
+        <li>Trova l’uscita verso il <b>Ledge</b>.</li>
+        <li>
+          Prendi il <b>Waypoint</b> e prosegui fino all’uscita per il
+          <b>Climb</b>.
+        </li>
+        <li>
+          Attraversa il <b>Climb</b> fino in fondo, prendendo il
+          <b>Waypoint</b> se lo incontri.
+        </li>
+        <li>Entra nella <b>Lower Prison</b> e attiva il <b>Waypoint</b>.</li>
+        <li>
+          Torna con il <b>Waypoint</b> a <b>Lioneye’s Watch</b>: se sei stato
+          veloce, il tuo portale dovrebbe essere ancora aperto. In caso
+          contrario, prendi il <b>Waypoint</b> per le <b>Flooded Depths</b>.
+        </li>
+        <li>
+          Trova l’ingresso delle <b>Flooded Depths</b> (di solito si trova nella
+          parte iniziale della mappa).
+        </li>
+        <li>Uccidi il <b>Deep Dweller</b>, poi esci (logout).</li>
+        <li>
+          Parla con <b>Tarkleigh</b> per ricevere il <b>Book of Skill</b>,
+          quindi prendi il <b>Waypoint</b> per la <b>Lower Prison</b>.
+        </li>
+        <li>Trova la <b>Labyrinth Trial</b> e completala.</li>
+        <li>Raggiungi l’uscita per la <b>Upper Prison</b>.</li>
+        <li>
+          Trova l’uscita per i <b>Warden’s Quarters</b> e vai subito verso le
+          <b>Warden’s Chambers</b>.
+        </li>
+        <li>Uccidi <b>Brutus</b>. Torna in città con portale o logout.</li>
+        <li>Parla con <b>Tarkleigh</b> per ricevere la ricompensa in gemma.</li>
+        <li>Usa il <b>Waypoint</b> per tornare al <b>Prisoner’s Gate</b>.</li>
+        <li>Procedi fino al <b>Ship Graveyard</b>.</li>
+        <li>
+          Attiva il <b>Waypoint</b>, che si trova sempre vicino all’ingresso
+          della zona.
+        </li>
+        <li>
+          Trova l’uscita verso la <b>Cavern of Wrath</b> e attiva il
+          <b>Waypoint</b>. Se trovi l’ingresso per la
+          <b>Ship Graveyard Cave</b>, piazza un portale.
+        </li>
+        <li>
+          Usa il <b>Waypoint</b> per tornare a <b>Lioneye’s Watch</b>, quindi
+          rientra col portale al <b>Ship Graveyard</b> (o usa il
+          <b>Waypoint</b> se non hai trovato la caverna).
+        </li>
+        <li>Trova ed entra nella <b>Ship Graveyard Cave</b>.</li>
+        <li>
+          Recupera l’<b>Allflame</b> ed esci di nuovo nel <b>Ship Graveyard</b>.
+        </li>
+        <li>Parla con <b>Fairgraves</b> e uccidilo.</li>
+        <li>
+          Torna in città con logout o <b>Waypoint</b>. Parla con
+          <b>Bestel</b> per ricevere il <b>Book of Skill</b>.
+        </li>
+        <li>Parla con <b>Nessa</b> per la ricompensa in gemma.</li>
+        <li>Usa il <b>Waypoint</b> per andare nella <b>Cavern of Wrath</b>.</li>
+        <li>Prosegui fino alla <b>Cavern of Anger</b>.</li>
+        <li>Entra nella <b>Merveil’s Lair</b>.</li>
+        <li>Uccidi <b>Merveil</b> ed entra nella <b>Southern Forest</b>.</li>
+        <li>Attraversa la zona ed entra nel <b>Forest Encampment</b>.</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    select.addEventListener("change", (event) => {
+      event.preventDefault(); // 🔑 blocca il reload
+      contents.forEach((c) => c.classList.remove("active"));
+      document.getElementById(select.value).classList.add("active");
+    });
+  </script>
 </html>
