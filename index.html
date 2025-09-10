@@ -1,6 +1,43 @@
 <!DOCTYPE html>
 <html lang="it">
-  <link rel="stylesheet" href="style.css" />
+  <style>body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #eee;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Intestazione con titolo e select */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #f39c12;
+  margin: 0;
+}
+
+select {
+  background: #222;
+  color: #eee;
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #f39c12;
+}
+</style>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
