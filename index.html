@@ -1,105 +1,111 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Guida Atto I X - Path of Exile</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- mobile friendly -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #eee;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guida Atto I - Path of Exile</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #eee;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
 
-    h2 {
-      color: #f39c12;
-    }
+h2 { color: #f39c12; }
 
-    .hover-item {
-      position: relative;
-      cursor: pointer;
-      color: #e74c3c;
-      font-weight: bold;
-    }
+.hover-item {
+  position: relative;
+  cursor: pointer;
+  color: #e74c3c;
+  font-weight: bold;
+}
 
-    .hover-image {
-      display: none;
-      position: absolute;
-      top: 20px;
-      left: 0;
-      z-index: 10;
-    }
+.hover-image {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+}
 
-    .hover-image img {
-      max-width: 150px;
-      border: 2px solid #fff;
-      border-radius: 4px;
-      background: #222;
-    }
+.hover-image img {
+  max-width: 150px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  background: #222;
+}
 
-    /* Desktop: mostra su hover */
-    @media (hover: hover) {
-      .hover-item:hover .hover-image {
-        display: block;
-      }
-    }
+/* Desktop hover */
+@media (hover: hover) {
+  .hover-item:hover .hover-image {
+    display: block;
+  }
+}
 
-    /* Mobile / click: quando attivo */
-    .hover-item.active .hover-image {
-      display: block;
-      position: static;   /* diventa parte del flusso normale */
-      margin-top: 8px;
-    }
-  </style>
+/* Active class per click/tap */
+.hover-item.active .hover-image {
+  display: block;
+}
+</style>
 </head>
 <body>
-  <h2>Guida Atto I</h2>
+<h2>Guida Atto I</h2>
+<ul>
+<li>
+  Uccidi 
+  <span class="hover-item">Hillock
+    <span class="hover-image">
+      <img src="Hillock.png" alt="Hillock">
+    </span>
+  </span>
+  alla fine del <b>Twilight Strand</b>.
+</li>
+<li>
+  Entra a <b>Lioneye’s Watch</b> e parla con <b>Tarkleigh</b> per ricevere la ricompensa.
+</li>
+<li>
+  Trova e uccidi 
+  <span class="hover-item">Brutus
+    <span class="hover-image">
+      <img src="Brutus.png" alt="Brutus">
+    </span>
+  </span>.
+</li>
+<li>
+  Sconfiggi 
+  <span class="hover-item">Merveil
+    <span class="hover-image">
+      <img src="https://pathofexile.fandom.com/wiki/Special:Redirect/file/Merveil_boss.png" alt="Merveil">
+    </span>
+  </span>
+  e avanza nella <b>Southern Forest</b>.
+</li>
+</ul>
 
-  <ul>
-    <li>
-      Uccidi 
-      <span class="hover-item">Hillock
-        <span class="hover-image">
-          <img src="Hillock.png" alt="Hillock">
-        </span>
-      </span>
-      alla fine del <b>Twilight Strand</b>.
-    </li>
-    <li>
-      Entra a <b>Lioneye’s Watch</b> e parla con <b>Tarkleigh</b> per ricevere la ricompensa.
-    </li>
-    <li>
-      Trova e uccidi 
-      <span class="hover-item">Brutus
-        <span class="hover-image">
-          <img src="Brutus.png" alt="Brutus">
-        </span>
-      </span>.
-    </li>
-    <li>
-      Sconfiggi 
-      <span class="hover-item">Merveil
-        <span class="hover-image">
-          <img src="https://pathofexile.fandom.com/wiki/Special:Redirect/file/Merveil_boss.png" alt="Merveil">
-        </span>
-      </span>
-      e avanza nella <b>Southern Forest</b>.
-    </li>
-  </ul>
-
-  <script>
-    // Mobile: toggle immagine al tap/click su testo o immagine
-    document.querySelectorAll('.hover-item').forEach(item => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        item.classList.toggle('active');
-      });
+<script>
+// Toggle immagine al click
+document.querySelectorAll('.hover-item').forEach(item => {
+  item.addEventListener('click', e => {
+    e.stopPropagation(); // impedisce bubbling verso document
+    // chiude tutte le altre immagini attive
+    document.querySelectorAll('.hover-item.active').forEach(el => {
+      if(el !== item) el.classList.remove('active');
     });
-  </script>
+    // toggle sull'elemento cliccato
+    item.classList.toggle('active');
+  });
+});
+
+// Click fuori chiude tutte le immagini
+document.addEventListener('click', () => {
+  document.querySelectorAll('.hover-item.active').forEach(el => {
+    el.classList.remove('active');
+  });
+});
+</script>
 </body>
 </html>
